@@ -1,0 +1,2 @@
+modValidar.WinRegistry
+modValidar.ValidateApplication

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Confs>
+	<Empresa>
+		<NoEmp>01</NoEmp>
+	</Empresa>
+	<ConexionSAE>
+		<controladorBD>DevartInterBase</controladorBD>
+		<rutaonombreBD>E:\DACs Software\ASPEL\DAC\Sistemas Aspel\COI7.00\Ejemplos\ejemplos.fdb</rutaonombreBD>
+		<ip>SISTEMAS</ip>
+		<tipoC>En red</tipoC>
+		<usuario>SYSDBA</usuario>
+		<contrasenia>masterkey</contrasenia>
+		<puerto>3050</puerto>
+	</ConexionSAE>
+	<ConexionCONT>		
+		<controladorBD>DevartSQLServer</controladorBD>
+		<rutaonombreBD>ctASASER</rutaonombreBD>
+		<ip>SISTEMAS\SQLEXPRESS</ip>
+		<tipoC>En red</tipoC>
+		<usuario>sa</usuario>
+		<contrasenia>12345</contrasenia>
+		<puerto>1433</puerto>
+		<IntegratedSecurity>false</IntegratedSecurity>
+	</ConexionCONT>
+	<digitosPorNivel> 
+		<nivel1>3</nivel1>
+		<nivel2>3</nivel2>
+		<nivel3>3</nivel3>
+		<nivel4>0</nivel4>
+		<nivel5>0</nivel5>
+		<nivel6>0</nivel6>
+		<nivel7>0</nivel7>
+		<nivel8>0</nivel8>
+		<nivel9>0</nivel9>
+	</digitosPorNivel>           
+ </Confs>

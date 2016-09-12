@@ -1,0 +1,22 @@
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\NetBeansProjects\ConeccionAFirebird Versionv3\dist\ConeccionAFirebirdV3.jar</jar>
+  <outfile>D:\NetBeansProjects\ConeccionAFirebird Versionv3\app.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir></chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <customProcName>false</customProcName>
+  <stayAlive>false</stayAlive>
+  <manifest></manifest>
+  <icon>D:\NetBeansProjects\ConeccionAFirebird Versionv3\appIco.ico</icon>
+  <jre>
+    <path>C:\Program Files\Java\jre1.7.0_17</path>
+    <minVersion>1.5.0</minVersion>
+    <maxVersion>1.7.0</maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+  </jre>
+</launch4jConfig>

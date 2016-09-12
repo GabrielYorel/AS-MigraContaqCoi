@@ -1,0 +1,22 @@
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>E:\NetBeansProjects\CtasContablesyPolizasv4\distapp\CtasContablesyPolizas.jar</jar>
+  <outfile>E:\NetBeansProjects\CtasContablesyPolizasv4\distapp\Contpaq-COI.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir></chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <customProcName>false</customProcName>
+  <stayAlive>false</stayAlive>
+  <manifest></manifest>
+  <icon>E:\NetBeansProjects\CtasContablesyPolizasv4\distapp\appIco.ico</icon>
+  <jre>
+    <path>C:\Program Files (x86)\Java\jre1.7.0_17</path>
+    <minVersion>1.5.0</minVersion>
+    <maxVersion>1.8.0</maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+  </jre>
+</launch4jConfig>

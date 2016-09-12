@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Confs>
+	<Cta>
+	       	<tipoContpaqi>A</tipoContpaqi>
+		<descrContpaqi>Activo Deudor</descrContpaqi>
+	       	<tipoCOI>D</tipoCOI>
+		<descrCoi>Deudor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>B</tipoContpaqi>
+		<descrContpaqi>Activo Acreedor</descrContpaqi>
+	       	<tipoCOI>A</tipoCOI>
+		<descrCoi>Acreedor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>C</tipoContpaqi>
+		<descrContpaqi>Pasivo Deudor</descrContpaqi>
+	       	<tipoCOI>D</tipoCOI>
+		<descrCoi>Deudor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>D</tipoContpaqi>
+		<descrContpaqi>Pasivo Acreedor</descrContpaqi>
+	       	<tipoCOI>A</tipoCOI>
+		<descrCoi>Acreedor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>E</tipoContpaqi>
+		<descrContpaqi>Capital Deudor</descrContpaqi>
+	       	<tipoCOI>D</tipoCOI>
+		<descrCoi>Deudor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>F</tipoContpaqi>
+		<descrContpaqi>Capital Acreedor</descrContpaqi>
+	       	<tipoCOI>A</tipoCOI>
+		<descrCoi>Acreedor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>G</tipoContpaqi>
+		<descrContpaqi>Resultados Deudor</descrContpaqi>
+	       	<tipoCOI>D</tipoCOI>
+		<descrCoi>Deudor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>H</tipoContpaqi>
+		<descrContpaqi>Resultados Acreedor</descrContpaqi>
+	       	<tipoCOI>A</tipoCOI>
+		<descrCoi>Acreedor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>I</tipoContpaqi>
+		<descrContpaqi>Estadistica Deudor</descrContpaqi>
+	       	<tipoCOI>D</tipoCOI>
+		<descrCoi>Deudor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>J</tipoContpaqi>
+		<descrContpaqi>Estadistica Acreedor</descrContpaqi>
+	       	<tipoCOI>A</tipoCOI>
+		<descrCoi>Acreedor</descrCoi>
+       </Cta>            
+	<Cta>
+	       	<tipoContpaqi>K</tipoContpaqi>
+		<descrContpaqi>Orden Deudor</descrContpaqi>
+	       	<tipoCOI>D</tipoCOI>
+		<descrCoi>Deudor</descrCoi>
+       </Cta>
+	<Cta>
+	       	<tipoContpaqi>L</tipoContpaqi>
+		<descrContpaqi>Orden Acreedor</descrContpaqi>
+	       	<tipoCOI>A</tipoCOI>
+		<descrCoi>Acreedor</descrCoi>
+       </Cta>
+ </Confs>
