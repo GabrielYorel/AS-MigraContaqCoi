@@ -66,6 +66,7 @@ public class CatCtas extends javax.swing.JInternalFrame {
     int[] dxNiveles;
     boolean seguridadIntegrada;
     public ArrayList<CuentaEntity> grafo = new ArrayList<CuentaEntity>(); 
+    public Connection conexionContpaq;
     
     /**
      * Creates new form CatCtas
@@ -383,7 +384,7 @@ public class CatCtas extends javax.swing.JInternalFrame {
             miHilo.padre = this;
             miHilo.start();
             grafo = miHilo.getGrafo();
-
+            conexionContpaq = miHilo.getConexionContpaqi();
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Error " + e.toString());
@@ -563,7 +564,7 @@ public class CatCtas extends javax.swing.JInternalFrame {
                             //-------------------------
                             nom.add("Reporte de Inventario.");
                             //-------------------
-                            ctascontablesypolizas.clases.exportar_excel excelExporter = new ctascontablesypolizas.clases.exportar_excel(exportarConFormato, tb, temp, nom, grafo);
+                            ctascontablesypolizas.clases.exportar_excel excelExporter = new ctascontablesypolizas.clases.exportar_excel(exportarConFormato, tb, temp, nom, grafo,conexionContpaq);
                             if (excelExporter.exportarExcel()) {
                                 JOptionPane.showMessageDialog(null, "DATOS EXPORTADOS CON EXITO!");
                                 llama(nomb);
@@ -581,7 +582,7 @@ public class CatCtas extends javax.swing.JInternalFrame {
                         //-------------------------
                         nom.add("Reporte de Inventario.");
                         //-------------------
-                        ctascontablesypolizas.clases.exportar_excel excelExporter = new ctascontablesypolizas.clases.exportar_excel(exportarConFormato, tb, temp, nom, grafo);
+                        ctascontablesypolizas.clases.exportar_excel excelExporter = new ctascontablesypolizas.clases.exportar_excel(exportarConFormato, tb, temp, nom, grafo,conexionContpaq);
                         if (excelExporter.exportarExcel()) {
                             JOptionPane.showMessageDialog(null, "DATOS EXPORTADOS CON EXITO!");
                             llama(nomb);
@@ -655,16 +656,9 @@ public class CatCtas extends javax.swing.JInternalFrame {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Error al guardar el archivo!", "Oops! Error", JOptionPane.ERROR_MESSAGE);
             }
-            
-            
-            
-            
       }  catch (Exception e){
           
       }
-        
-        
-        
     }//GEN-LAST:event_jbtnExportar1ActionPerformed
 
     public void cerrarVentana() {

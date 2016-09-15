@@ -359,5 +359,9 @@ public class HiloCargarCatCtasArbol extends Thread {
         this.grafo = grafo;
     }
 
+    public Connection getConexionContpaqi() {
+        return conexionContpaqi;
+    }
+
 
 }

@@ -141,4 +141,8 @@ public class HiloCargarCatCtas extends Thread {
         }
         return nvaCuenta.substring(0, nvaCuenta.length());
     }
+    public Connection getConexionContpaq(){
+        
+        return conexionContpaqi;
+    }
 }

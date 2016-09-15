@@ -5,9 +5,8 @@
         <group>
             <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/clases/exportar_excel.java</file>
             <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/CatCtas.java</file>
-            <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/clases/CuentaEntity.java</file>
+            <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/clases/HiloCargarCatCtas.java</file>
             <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/clases/HiloExportCtas.java</file>
-            <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/clases/ImportarExcel.java</file>
             <file>file:/C:/Users/Alejandro%20Vargas/Desktop/Asciende/www.as_migra_contpaq_coi.com/src/ctascontablesypolizas/clases/HiloCargarCatCtasArbol.java</file>
         </group>
     </open-files>

@@ -1,6 +1,9 @@
 package ctascontablesypolizas.clases;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
@@ -22,21 +25,26 @@ public class exportar_excel {
     private List<String> nom_hoja;
     private boolean exportarConFormato = false;
     private String mensaje;
+    public int[] dxNiveles;
     private ArrayList<CuentaEntity> grafo = new ArrayList<CuentaEntity>(); 
+    private Connection conexionContpaqi;
 
     public String getMensaje() {
         return mensaje;
     }
 
-    public exportar_excel(boolean exportarConFormato, List<JTable> tab, File ar, List<String> nom, ArrayList<CuentaEntity> grafo) throws Exception {
+    public exportar_excel(boolean exportarConFormato, List<JTable> tab, File ar, List<String> nom, ArrayList<CuentaEntity> grafo,Connection conexionContpaqi) throws Exception {
         this.archi = ar;
         this.tabla = tab;
+        this.dxNiveles = dxNiveles;
         this.nom_hoja = nom;
+        this.conexionContpaqi = conexionContpaqi;
         this.exportarConFormato = exportarConFormato;
         this.grafo = grafo;
         if (nom.size() != tab.size()) {
             throw new Exception("ERROR");
         }
+        setContpaqNiveles();
     }
     
     public boolean exportarExcel() throws IOException {
@@ -73,13 +81,14 @@ public class exportar_excel {
         cell2 = row1.createCell(6);
         cell2.setCellValue("Tipo COI");
         
+        
         for (int i=1; i< grafo.size();i++){
             cuenta = grafo.get(i);
 
             HSSFRow row = sheet.createRow(i);
             HSSFCell cell = row.createCell(1);
             cell.setCellStyle(style);
-            cell.setCellValue(cuenta.getCodigo());
+            cell.setCellValue(ponerGuiones(cuenta.getCodigo()));
             cell = row.createCell(2);
             cell.setCellValue(cuenta.getNombre());
             if(cuenta.getIdPadre()!= -1){//si es nodo raiz no tiene codigo de padre
@@ -221,8 +230,47 @@ public class exportar_excel {
         }
 //        return false;
     }
+
+    private String ponerGuiones(String codigo) {
+        String temp2="";
+        int cuenta=0;
+        
+        for(int i = 0; i<dxNiveles.length ; i++,cuenta++){
+            System.out.println("lalalalala    "+ dxNiveles[i]);
+            //temp2+= codigo.substring(cuenta, cuenta+dxNiveles[i]-1);
+        }
+        System.out.println(temp2);
+        
+        
+        return " ";
+    }
     
-    
-    
-    
+    private void setContpaqNiveles() {
+        String temp ="";
+        try {
+            PreparedStatement stmtCountCtas = conexionContpaqi.prepareStatement("SELECT EstructCta FROM Parametros");
+            ResultSet rsCount = stmtCountCtas.executeQuery();
+            if (rsCount.next()) {
+                temp = rsCount.getNString(1);
+            }
+            System.out.println("temp es: "+temp);
+            rsCount.close();
+        } catch (Exception e) {}
+
+        if(temp=="")
+            System.out.println("Error al obtener la EstrucCta desde contpaq para imprimir con guiones");
+
+        String[] temp2 = temp.split("-");
+        dxNiveles = new int[temp2.length];
+        for(int i = 0; i < temp2.length; i++) {
+            try {
+                dxNiveles[i] = Integer.parseInt(temp2[i]);
+                
+            } catch (Exception e) {
+            }
+
+        }
+        
+    }
+
 }
