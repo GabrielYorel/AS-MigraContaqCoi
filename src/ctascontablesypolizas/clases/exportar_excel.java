@@ -68,7 +68,11 @@ public class exportar_excel {
         cell2.setCellValue("Cuenta Padre");
         cell2 = row1.createCell(4);
         cell2.setCellValue("Cuenta Nueva");
-
+        cell2 = row1.createCell(5);
+        cell2.setCellValue("Tipo Contpaq");
+        cell2 = row1.createCell(6);
+        cell2.setCellValue("Tipo COI");
+        
         for (int i=1; i< grafo.size();i++){
             cuenta = grafo.get(i);
 
@@ -82,6 +86,28 @@ public class exportar_excel {
                 cell = row.createCell(3);
                 cell.setCellValue(cuenta.getPadre().getCodigo());
             }
+            
+            char tempTipo = cuenta.getTipo();
+            cell = row.createCell(5);
+            if(tempTipo == 'A'){
+                cell.setCellValue("A (Activo Deudor)");
+                cell = row.createCell(6);
+                cell.setCellValue("D (Deudor)");
+            }else if(tempTipo == 'D'){
+                cell.setCellValue("D (Pasivo Acreedor)");
+                cell = row.createCell(6);
+                cell.setCellValue("A (Acreedor)");
+            }else if(tempTipo == 'G'){
+                cell.setCellValue("G (Resultados Deudor)");
+                cell = row.createCell(6);
+                cell.setCellValue("D (Deudor)");
+            }else if(tempTipo == 'H'){
+                cell.setCellValue("H (Resultados Acreedor)");
+                cell = row.createCell(6);
+                cell.setCellValue("A (Acreedor)");
+            }
+            
+            
 
 
         }

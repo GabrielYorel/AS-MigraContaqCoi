@@ -5,21 +5,14 @@
 package ctascontablesypolizas.clases;
 
 import ctascontablesypolizas.CatCtas;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
-import org.apache.poi.hssf.usermodel.*;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 /**
  *
@@ -279,7 +272,6 @@ public class HiloCargarCatCtasArbol extends Thread {
     
     
     public void crearArbol() throws SQLException{
-        System.out.println("Crear arbol");
         int numCtasPadre=0;
         PreparedStatement stmtCountCtas = conexionContpaqi.prepareStatement("SELECT count(*) FROM dbo.Cuentas WHERE Codigo LIKE '\\_%' {escape '\\'}");
         ResultSet rsCount = stmtCountCtas.executeQuery();
@@ -308,7 +300,7 @@ public class HiloCargarCatCtasArbol extends Thread {
             CuentaEntity cuenta = new CuentaEntity();
             cuenta.setCodigo(rsCount3.getString(1));
             cuenta.setNombre(rsCount3.getString(2));
-            cuenta.setTipo(rsCount3.getString(3));
+            cuenta.setTipo(rsCount3.getString(3).charAt(0));
             cuenta.setEsBaja(rsCount3.getBoolean(4));
             cuenta.setCtaMayor(rsCount3.getInt(5));
             cuenta.setIdAsociacion(rsCount3.getInt(6));
@@ -323,7 +315,6 @@ public class HiloCargarCatCtasArbol extends Thread {
         }
         rsCount3.close();
         //todos los nodos fueron creados, proximo paso: crear las relaciones
-        System.out.println("tamaño vaciado"+grafo.size());
         for(int i=0 ; i<grafo.size();i++){
             CuentaEntity cuenta = new CuentaEntity();
             CuentaEntity cuentaBuscada = new CuentaEntity();
@@ -341,7 +332,6 @@ public class HiloCargarCatCtasArbol extends Thread {
             }
         }//arbol contenido en arreglo llamado: vaciado
         //con todas las relaciones hechas solo con los hijos directos
-        System.out.println("arbol creado");
     }
 
     private int getIdNodoPadre(int idPadre) {

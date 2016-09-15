@@ -15,7 +15,7 @@ public class CuentaEntity {
     private int id;
     private String codigo;
     private String nombre;
-    private String tipo;
+    private char tipo;
     private boolean esBaja;
     private int ctaMayor;
     private int idAsociacion;
@@ -23,7 +23,7 @@ public class CuentaEntity {
     private CuentaEntity padre;
     private ArrayList <CuentaEntity> hijos= new ArrayList<CuentaEntity>();
     private boolean importarCOI;
-    private String nuevocodigo;
+    private String nuevocodigo= "-1";
 
     
 
@@ -56,7 +56,7 @@ public class CuentaEntity {
         
     }
     
-    public CuentaEntity(int id, String codigo, String nombre, String tipo, boolean esBaja, int ctaMayor, int idAsociacion, int idPadre) {
+    public CuentaEntity(int id, String codigo, String nombre, char tipo, boolean esBaja, int ctaMayor, int idAsociacion, int idPadre) {
         this.id = id;
         this.codigo = codigo;
         this.nombre = nombre;
@@ -106,11 +106,11 @@ public class CuentaEntity {
         this.nombre = nombre;
     }
 
-    public String getTipo() {
+    public char getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(char tipo) {
         this.tipo = tipo;
     }
 

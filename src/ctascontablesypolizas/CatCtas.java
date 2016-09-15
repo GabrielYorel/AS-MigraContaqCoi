@@ -155,7 +155,7 @@ public class CatCtas extends javax.swing.JInternalFrame {
 
         jbtnExportar1.setBackground(new java.awt.Color(178, 233, 187));
         jbtnExportar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/excel.png"))); // NOI18N
-        jbtnExportar1.setToolTipText("Exportar a MS Excel");
+        jbtnExportar1.setToolTipText("Importar de MS Excel");
         jbtnExportar1.setFocusable(false);
         jbtnExportar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jbtnExportar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -647,7 +647,7 @@ public class CatCtas extends javax.swing.JInternalFrame {
             try {
                 if (seleccion == JFileChooser.APPROVE_OPTION) {//comprueba si ha presionado el boton de aceptar
                     File JFC = fileChooser.getSelectedFile();
-                    ImportarExcel importar = new ImportarExcel(JFC);
+                    ImportarExcel importar = new ImportarExcel(JFC,grafo);
                     
                     
                 }
